@@ -10,6 +10,7 @@
   font-family: "Josefin Sans";
   font-size: 16px;
   color: #131313;
+  --main-f5-color: #f5f5f5;
 }
 
 button {
@@ -45,7 +46,7 @@ body {
 }
 
 .header {
-  background: #fff;
+  background: #131313;
 }
 .header .header-block {
   position: relative;
@@ -78,6 +79,7 @@ body {
   font-size: 16px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
+  color: #f5f5f5;
 }
 .header .header-block .header__nav-link:hover {
   -webkit-transform: scale(1.2);
@@ -146,7 +148,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 5px;
-  color: #fff;
+  color: var(--main-f5-color);
 }
 .navigation-block .navigation .navigation__link-block .navigation__link {
   display: -webkit-box;
@@ -155,7 +157,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #fff;
+  color: var(--main-f5-color);
 }
 
 .cards .cards-block {
@@ -176,7 +178,7 @@ body {
 .cards .cards-block .cards__title-block .title {
   font-weight: 400;
   font-size: 20px;
-  color: #fff;
+  color: var(--main-f5-color);
 }
 .cards .cards-block .items-block {
   display: -webkit-box;
@@ -205,12 +207,14 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   height: 240px;
-  -webkit-box-shadow: 0 0 7px 1px rgba(17, 17, 17, 0.1);
-          box-shadow: 0 0 7px 1px rgba(17, 17, 17, 0.1);
+  -webkit-box-shadow: 0 0 7px 1px rgba(17, 17, 17, 0.05);
+          box-shadow: 0 0 7px 1px rgba(17, 17, 17, 0.05);
 }
 .cards .item-wrapper .item .image-block {
   width: 190px;
   height: 190px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 .cards .item-wrapper .item .image-block .image {
   max-width: 100%;
@@ -250,14 +254,17 @@ body {
 .cards .item-wrapper .item .cover-block .item__name .name {
   font-size: 20px;
   color: #fff;
+  cursor: default;
 }
 .cards .item-wrapper .item .cover-block .item__name .dash {
   margin: 0 5px;
   color: #fff;
+  cursor: default;
 }
 .cards .item-wrapper .item .cover-block .item__name .price {
   font-size: 16px;
   color: #fff;
+  cursor: default;
 }
 .cards .item-wrapper .item .cover-block .item__button {
   position: absolute;
@@ -290,6 +297,10 @@ body {
 }
 .cards .item-wrapper .item:hover .cover-block {
   opacity: 1;
+}
+.cards .item-wrapper .item:hover .image-block {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .footer {
