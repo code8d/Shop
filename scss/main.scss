@@ -45,3 +45,106 @@
         }
     }
 }
+
+.cards {
+    .container {
+    }
+    .cards-block {
+        margin-bottom: 5px;
+        .cards__title-block {
+            display: flex;
+            align-items: center;
+            height: 80px;
+            padding: 0 20px;
+            background: #171717;
+            margin-bottom: 20px;
+            .title {
+                font-weight: 400;
+                font-size: 20px;
+                color: #fff;
+            }
+        }
+        .items-block {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -8px;
+        }
+    }
+    .item-wrapper {
+        flex: 0 0 25%;
+        padding: 0 8px;
+        margin-bottom: 25px;
+        .item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 240px;
+            box-shadow: 0 0 7px 1px rgba(17, 17, 17, .1);
+            .image-block {
+                width: 190px;
+                height: 190px;
+                .image {
+                    max-width: 100%;
+                    max-height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .cover-block {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                transition: .3s ease;
+                .item__name {
+                    position: relative;
+                    z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    transform: translateY(-9px);
+                    .name {
+                        font-size: 20px;
+                        color: #fff;
+                    }
+                    .dash {
+                        margin: 0 5px;
+                        color: #fff;
+                    }
+                    .price {
+                        font-size: 16px;
+                        color: #fff;
+                    }
+                }
+                .item__button {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    background: #000;
+                    .icon {
+                        max-width: 25px;
+                        max-height: 25px;
+                    }
+                }
+                .fade {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, .5);
+                }
+            }
+            &:hover .cover-block {
+                opacity: 1;
+            }
+        }
+    }
+}
